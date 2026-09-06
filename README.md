@@ -1,4 +1,4 @@
-\# Supply Chain Delivery Performance Analysis
+# Supply Chain Delivery Performance Analysis
 
 
 
@@ -10,11 +10,11 @@ The project combines exploratory data analysis, statistical testing, root-cause 
 
 
 
-\---
+---
 
 
 
-\## Business Problem
+## Business Problem
 
 
 
@@ -26,25 +26,25 @@ The objective of this project was to:
 
 
 
-\- Analyze overall delivery performance and late-delivery patterns
+- Analyze overall delivery performance and late-delivery patterns
 
-\- Identify operational factors contributing to delivery delays
+- Identify operational factors contributing to delivery delays
 
-\- Quantify the financial impact of delayed orders
+- Quantify the financial impact of delayed orders
 
-\- Identify important predictors of late delivery
+- Identify important predictors of late delivery
 
-\- Build a machine learning model to predict late-delivery risk before shipment
+- Build a machine learning model to predict late-delivery risk before shipment
 
-\- Provide data-driven recommendations to improve delivery performance
-
-
-
-\---
+- Provide data-driven recommendations to improve delivery performance
 
 
 
-\## Dataset Overview
+---
+
+
+
+## Dataset Overview
 
 
 
@@ -66,41 +66,41 @@ The objective of this project was to:
 
 
 
-\---
+---
 
 
 
-\## Tools \& Technologies
+## Tools & Technologies
 
 
 
-\- Python
+- Python
 
-\- Pandas
+- Pandas
 
-\- NumPy
+- NumPy
 
-\- Matplotlib
+- Matplotlib
 
-\- Seaborn
+- Seaborn
 
-\- Scikit-learn
+- Scikit-learn
 
-\- Imbalanced-learn (SMOTE)
+- Imbalanced-learn (SMOTE)
 
-\- Jupyter Notebook
-
-
-
-\---
+- Jupyter Notebook
 
 
 
-\## Analytical Approach
+---
 
 
 
-\### 1. Exploratory Data Analysis
+## Analytical Approach
+
+
+
+### 1. Exploratory Data Analysis
 
 
 
@@ -108,23 +108,23 @@ Delivery performance was analyzed across:
 
 
 
-\- Shipping Mode
+- Shipping Mode
 
-\- Order Region
+- Order Region
 
-\- Customer Segment
+- Customer Segment
 
-\- Product Category
+- Product Category
 
-\- Department
+- Department
 
-\- Order Type
+- Order Type
 
-\- Payment Status
+- Payment Status
 
-\- Order Month
+- Order Month
 
-\- Order Hour
+- Order Hour
 
 
 
@@ -132,7 +132,7 @@ Time-based analysis was also performed to identify seasonal and hourly patterns 
 
 
 
-\### 2. Statistical Analysis
+### 2. Statistical Analysis
 
 
 
@@ -144,17 +144,17 @@ The analysis included:
 
 
 
-\- Correlation analysis
+- Correlation analysis
 
-\- Chi-square testing for categorical variables
+- Chi-square testing for categorical variables
 
-\- Statistical significance testing
+- Statistical significance testing
 
-\- Feature-level comparisons between late and on-time orders
+- Feature-level comparisons between late and on-time orders
 
 
 
-\### 3. Root-Cause Analysis
+### 3. Root-Cause Analysis
 
 
 
@@ -162,15 +162,15 @@ The analysis identified major operational bottlenecks, particularly across Shipp
 
 
 
-\---
+---
 
 
 
-\## Key Business Findings
+## Key Business Findings
 
 
 
-\### Shipping Mode is a Major Bottleneck
+### Shipping Mode is a Major Bottleneck
 
 
 
@@ -196,7 +196,7 @@ This indicates that shipping mode is strongly associated with delivery performan
 
 
 
-\### Regional Delivery Risk
+### Regional Delivery Risk
 
 
 
@@ -208,9 +208,9 @@ Within this region:
 
 
 
-\- First Class deliveries had a 100% late-delivery rate
+- First Class deliveries had a 100% late-delivery rate
 
-\- Second Class deliveries had an 82.8% late-delivery rate
+- Second Class deliveries had an 82.8% late-delivery rate
 
 
 
@@ -218,7 +218,7 @@ This highlights the need for region-specific logistics planning.
 
 
 
-\### Financial Impact
+### Financial Impact
 
 
 
@@ -226,7 +226,7 @@ Delayed orders represented approximately $2.1M in profit at risk, demonstrating 
 
 
 
-\### Time-Based Patterns
+### Time-Based Patterns
 
 
 
@@ -234,11 +234,11 @@ Delivery performance varied across order months and order hours, making time-bas
 
 
 
-\---
+---
 
 
 
-\## Machine Learning
+## Machine Learning
 
 
 
@@ -246,7 +246,7 @@ A supervised classification approach was used to predict whether an individual o
 
 
 
-\### Models Compared
+### Models Compared
 
 
 
@@ -254,19 +254,19 @@ Five classification algorithms were evaluated:
 
 
 
-1\. Logistic Regression
+1. Logistic Regression
 
-2\. Decision Tree
+2. Decision Tree
 
-3\. Naive Bayes
+3. Naive Bayes
 
-4\. Random Forest
+4. Random Forest
 
-5\. Gradient Boosting
+5. Gradient Boosting
 
 
 
-\### Feature Engineering
+### Feature Engineering
 
 
 
@@ -274,23 +274,23 @@ The model used features that would be available before shipment, including:
 
 
 
-\- Type
+- Type
 
-\- Scheduled Shipping Days
+- Scheduled Shipping Days
 
-\- Category Name
+- Category Name
 
-\- Customer Segment
+- Customer Segment
 
-\- Department Name
+- Department Name
 
-\- Order Region
+- Order Region
 
-\- Shipping Mode
+- Shipping Mode
 
-\- Order Month
+- Order Month
 
-\- Order Hour
+- Order Hour
 
 
 
@@ -298,25 +298,25 @@ Categorical variables were transformed using frequency encoding.
 
 
 
-\### Model Training
+### Model Training
 
 
 
-\- Stratified 80/20 train-test split
+- Stratified 80/20 train-test split
 
-\- SMOTE applied only to the training data to address class imbalance
+- SMOTE applied only to the training data to address class imbalance
 
-\- Multiple classification models evaluated using performance metrics
+- Multiple classification models evaluated using performance metrics
 
-\- Feature importance analyzed for the final model
-
-
-
-\---
+- Feature importance analyzed for the final model
 
 
 
-\## Final Model: Random Forest
+---
+
+
+
+## Final Model: Random Forest
 
 
 
@@ -344,11 +344,11 @@ The model achieved an ROC-AUC of 0.82, indicating good ability to distinguish be
 
 
 
-\---
+---
 
 
 
-\## Important Predictors
+## Important Predictors
 
 
 
@@ -356,15 +356,15 @@ Feature importance analysis identified the following variables among the most in
 
 
 
-1\. Order Hour
+1. Order Hour
 
-2\. Scheduled Shipping Days
+2. Scheduled Shipping Days
 
-3\. Order Region
+3. Order Region
 
-4\. Order Month
+4. Order Month
 
-5\. Shipping Mode
+5. Shipping Mode
 
 
 
@@ -372,15 +372,15 @@ These features provide useful signals for identifying delivery risk before an or
 
 
 
-\---
+---
 
 
 
-\## Business Recommendations
+## Business Recommendations
 
 
 
-\### 1. Review High-Risk Shipping Modes
+### 1. Review High-Risk Shipping Modes
 
 
 
@@ -388,7 +388,7 @@ Investigate the operational causes behind the extremely high late-delivery rates
 
 
 
-\### 2. Implement Region-Specific Logistics Strategies
+### 2. Implement Region-Specific Logistics Strategies
 
 
 
@@ -396,7 +396,7 @@ Prioritize regions such as Central Africa for additional logistics capacity, car
 
 
 
-\### 3. Introduce Pre-Shipment Risk Prediction
+### 3. Introduce Pre-Shipment Risk Prediction
 
 
 
@@ -404,7 +404,7 @@ Use the predictive model to flag high-risk orders before shipment so that correc
 
 
 
-\### 4. Optimize Scheduled Shipping
+### 4. Optimize Scheduled Shipping
 
 
 
@@ -412,7 +412,7 @@ Use historical delivery patterns and scheduled shipping days to improve delivery
 
 
 
-\### 5. Monitor High-Risk Time Periods
+### 5. Monitor High-Risk Time Periods
 
 
 
@@ -420,11 +420,11 @@ Use month and hour-level patterns to anticipate periods of increased delivery ri
 
 
 
-\---
+---
 
 
 
-\## Project Workflow
+## Project Workflow
 
 
 
@@ -432,7 +432,7 @@ Data Collection
 
 ↓  
 
-Data Cleaning \& Preparation  
+Data Cleaning & Preparation  
 
 ↓  
 
@@ -472,11 +472,11 @@ Business Recommendations
 
 
 
-\---
+---
 
 
 
-\## Project Files
+## Project Files
 
 
 
@@ -484,9 +484,9 @@ Business Recommendations
 
 |---|---|
 
-| `Supply\_Chain\_Analysis.ipynb` | Complete data analysis, visualization, statistical analysis, feature engineering, and machine learning workflow |
+| `Supply_Chain_Analysis.ipynb` | Complete data analysis, visualization, statistical analysis, feature engineering, and machine learning workflow |
 
-| `Supply\_Chain\_Delivery\_Performance\_Report.docx` | Detailed project report containing methodology, findings, model evaluation, and recommendations |
+| `Supply_Chain_Delivery_Performance_Report.docx` | Detailed project report containing methodology, findings, model evaluation, and recommendations |
 
 | `.gitignore` | Specifies large datasets and model artifacts excluded from version control |
 
@@ -496,11 +496,11 @@ Business Recommendations
 
 
 
-\---
+---
 
 
 
-\## Conclusion
+## Conclusion
 
 
 
@@ -520,17 +520,17 @@ Overall, the project combines business analysis, statistical reasoning, data vis
 
 
 
-\---
+---
 
 
 
-\## Author
+## Author
 
 
 
-\*\*Renu Nadar\*\*
+**Renu Nadar**
 
 
 
-MSc Statistics | Data Analytics \& Machine Learning
+MSc Statistics | Data Analytics & Machine Learning
 
