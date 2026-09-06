@@ -265,4 +265,4 @@ Overall, the project combines business analysis, statistical reasoning, data vis
 
 **Renu Nadar**
 
-MSc Statistics | Data Analytics & Machine Learning
+MSc Statistics
