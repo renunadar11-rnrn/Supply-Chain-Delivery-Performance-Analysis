@@ -246,8 +246,7 @@ Business Recommendations
 | `DataCoSupplyChainDataset.csv` | Original dataset used for the analysis |
 | `.gitignore` | Specifies files and artifacts excluded from version control |
 
-> **Dataset:** The original dataset is included in this repository for reproducibility. The trained machine learning model is not included because of its large file size.
-
+> **Dataset & Model:** The original dataset is included in this repository for reproducibility. The trained Random Forest model is excluded due to its large file size; the notebook contains the complete model training workflow.
 ---
 
 ## Conclusion
