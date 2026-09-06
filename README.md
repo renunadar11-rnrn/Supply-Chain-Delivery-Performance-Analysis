@@ -243,9 +243,10 @@ Business Recommendations
 |---|---|
 | `Supply_Chain_Analysis.ipynb` | Complete data analysis, visualization, statistical analysis, feature engineering, and machine learning workflow |
 | `Supply_Chain_Delivery_Performance_Report.docx` | Detailed project report containing methodology, findings, model evaluation, and recommendations |
-| `.gitignore` | Specifies large datasets and model artifacts excluded from version control |
+| `DataCoSupplyChainDataset.csv` | Original dataset used for the analysis |
+| `.gitignore` | Specifies files and artifacts excluded from version control |
 
-> Note: The original dataset and trained model files are not included in this repository because of their large file sizes. The notebook contains the complete analysis and modeling workflow.
+> **Dataset:** The original dataset is included in this repository for reproducibility. The trained machine learning model is not included because of its large file size.
 
 ---
 
