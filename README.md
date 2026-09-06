@@ -2,105 +2,251 @@
 
 
 
-\## Project Overview
+\## 📌 Project Overview
 
 
 
-An end-to-end analysis of e-commerce delivery performance to identify late-delivery drivers, operational bottlenecks, their financial impact, and opportunities for improvement.
+An end-to-end data analytics and machine learning project analyzing e-commerce delivery performance to identify late-delivery patterns, operational bottlenecks, financial impact, and key predictors of delivery delays.
 
 
 
-\## Business Problem
+The project combines exploratory data analysis, statistical testing, business diagnostics, feature engineering, and predictive modeling to understand why orders are delivered late and how late-delivery risk can be predicted before shipment.
 
 
 
-The company faced a high rate of late deliveries, affecting customer experience and profitability. The objective was to analyze delivery performance, identify key causes of delays, quantify their financial impact, and build a predictive model to flag high-risk orders before shipment.
+\---
 
 
 
-\## Objectives
+\## 🎯 Business Problem
+
+
+
+The company experienced a high rate of late deliveries, negatively affecting customer experience and profitability.
+
+
+
+The objective of this project was to:
 
 
 
 \- Analyze overall delivery performance and late-delivery patterns
 
-\- Identify operational bottlenecks and root causes of delays
+\- Identify operational factors contributing to delivery delays
 
-\- Quantify the financial impact of late deliveries
+\- Quantify the financial impact of delayed orders
 
-\- Build a machine learning model to predict late-delivery risk
+\- Identify important predictors of late delivery
 
-\- Provide data-driven recommendations for improving delivery performance
+\- Build a machine learning model to predict late-delivery risk before shipment
 
-
-
-\## Tools \& Technologies
+\- Provide data-driven recommendations to improve delivery performance
 
 
 
-\- Python
-
-\- Pandas
-
-\- NumPy
-
-\- Matplotlib
-
-\- Seaborn
-
-\- Scikit-learn
-
-\- SMOTE
-
-\- Jupyter Notebook
+\---
 
 
 
-\## Key Findings
+\## 📊 Dataset Overview
 
 
 
-\- Analyzed \*\*172,765 orders\*\*
+\- \*\*Orders analyzed:\*\* 172,765
 
-\- \*\*54.71%\*\* of orders were delivered late
+\- \*\*Analysis period:\*\* January 2015 – January 2018
 
-\- Late deliveries represented approximately \*\*$2.1M in profit at risk\*\*
+\- \*\*Late deliveries:\*\* 54.71%
 
-\- \*\*Shipping Mode\*\* was identified as the strongest operational bottleneck
+\- \*\*On-time deliveries:\*\* 45.29%
 
-\- First Class shipments had a \*\*100% delay rate\*\*
+\- \*\*Profit at risk from delayed orders:\*\* $2.1M
 
-\- Second Class shipments had a \*\*79.8% delay rate\*\*
-
-\- Seasonal peaks were observed during \*\*August, September, and December\*\*
+\- \*\*Total profit across profitable orders:\*\* $7.5M
 
 
 
-\## Statistical Analysis
+\---
 
 
 
-The analysis included:
+\## 🛠️ Tools \& Technologies
 
 
 
-\- Exploratory Data Analysis
+\- \*\*Python\*\*
 
-\- Pearson correlation analysis
+\- \*\*Pandas\*\* – Data manipulation and analysis
 
-\- Chi-square tests of independence
+\- \*\*NumPy\*\* – Numerical computing
 
-\- Feature engineering
+\- \*\*Matplotlib\*\* – Data visualization
 
-\- Bottleneck detection
+\- \*\*Seaborn\*\* – Statistical visualization
 
-\- Root cause analysis
+\- \*\*Scikit-learn\*\* – Machine learning
 
-\- Time-based delay analysis
+\- \*\*Imbalanced-learn (SMOTE)\*\* – Class imbalance handling
+
+\- \*\*Jupyter Notebook\*\* – Analysis and model development
 
 
 
-\## Machine Learning
+\---
+
+
+
+\## 🔎 Analytical Approach
+
+
+
+\### 1. Exploratory Data Analysis
+
+
+
+Analyzed delivery performance across:
+
+
+
+\- Shipping Mode
+
+\- Order Region
+
+\- Customer Segment
+
+\- Product Category
+
+\- Department
+
+\- Order Type
+
+\- Payment Status
+
+\- Order Month
+
+\- Order Hour
+
+
+
+Time-based analysis was also performed to identify seasonal and hourly delivery patterns.
+
+
+
+\### 2. Statistical Analysis
+
+
+
+Statistical techniques were used to investigate relationships between delivery risk and categorical as well as numerical variables.
+
+
+
+This included:
+
+
+
+\- Correlation analysis
+
+\- Chi-square testing for categorical variables
+
+\- Statistical significance testing
+
+\- Feature-level comparisons between late and on-time orders
+
+
+
+\### 3. Root-Cause Analysis
+
+
+
+The analysis identified major operational bottlenecks, particularly across \*\*Shipping Mode\*\* and \*\*Order Region\*\*.
+
+
+
+\---
+
+
+
+\## 🚨 Key Business Findings
+
+
+
+\### Shipping Mode is a Major Bottleneck
+
+
+
+Late-delivery rates varied substantially across shipping modes:
+
+
+
+| Shipping Mode | Late Delivery Rate |
+
+|---|---:|
+
+| First Class | 100.0% |
+
+| Second Class | 79.8% |
+
+| Standard Class | 39.8% |
+
+| Same Day | 0.0% |
+
+
+
+This indicates that certain shipping modes are strongly associated with delivery delays.
+
+
+
+\### Regional Delivery Risk
+
+
+
+\*\*Central Africa\*\* recorded the highest late-delivery rate at approximately \*\*58.7%\*\*.
+
+
+
+Within this region:
+
+
+
+\- First Class deliveries had a 100% late-delivery rate
+
+\- Second Class deliveries had an 82.8% late-delivery rate
+
+
+
+This highlights the need for region-specific logistics planning.
+
+
+
+\### Financial Impact
+
+
+
+Delayed orders represented approximately \*\*$2.1M in profit at risk\*\*, demonstrating that delivery performance is not only an operational issue but also a financial concern.
+
+
+
+\### Time-Based Patterns
+
+
+
+Late deliveries also showed variations across order months and order hours, making time-based features useful for predictive modeling.
+
+
+
+\---
+
+
+
+\## 🤖 Machine Learning
+
+
+
+A supervised classification approach was used to predict whether an individual order would be delivered late.
+
+
+
+\### Models Compared
 
 
 
@@ -120,73 +266,265 @@ Five classification algorithms were evaluated:
 
 
 
-Categorical variables were frequency encoded and the training data was balanced using SMOTE.
+\### Feature Engineering
 
 
 
-\### Final Model
+The model used features that would be available \*\*before shipment\*\*, including:
 
 
 
-\*\*Random Forest\*\* was selected as the final model based on its overall performance.
+\- Type
+
+\- Scheduled Shipping Days
+
+\- Category Name
+
+\- Customer Segment
+
+\- Department Name
+
+\- Order Region
+
+\- Shipping Mode
+
+\- Order Month
+
+\- Order Hour
 
 
 
-\- Accuracy: \*\*73.58%\*\*
-
-\- Recall: \*\*74.57%\*\*
-
-\- F1-Score: \*\*76.38%\*\*
-
-\- ROC-AUC: \*\*0.82\*\*
+Categorical variables were transformed using frequency encoding.
 
 
 
-The model uses pre-shipment features to identify orders that are at higher risk of late delivery.
+\### Model Training
 
 
 
-\## Business Recommendations
+\- Stratified 80/20 train-test split
+
+\- SMOTE applied only to the training data to address class imbalance
+
+\- Multiple classification models evaluated using performance metrics
+
+\- Feature importance analyzed for the final model
 
 
 
-\- Audit First Class and Second Class shipping performance
-
-\- Implement predictive alerts for high-risk orders
-
-\- Address payment-processing bottlenecks
-
-\- Develop additional capacity plans for seasonal demand
-
-\- Review shipping-mode assignment logic
-
-\- Investigate high-delay departments and regions
+\---
 
 
 
-\## Project Files
+\## 🏆 Final Model: Random Forest
+
+
+
+Random Forest was selected as the final model based on its overall predictive performance.
+
+
+
+| Metric | Score |
+
+|---|---:|
+
+| Accuracy | 73.58% |
+
+| Precision | 78.28% |
+
+| Recall | 74.57% |
+
+| F1-Score | 76.38% |
+
+| ROC-AUC | 82.26% |
+
+
+
+The model achieved an \*\*ROC-AUC of 0.82\*\*, indicating good ability to distinguish between late and on-time deliveries.
+
+
+
+\---
+
+
+
+\## 📈 Important Predictors
+
+
+
+Feature importance analysis identified the following variables among the most influential predictors of late delivery:
+
+
+
+1\. Order Hour
+
+2\. Scheduled Shipping Days
+
+3\. Order Region
+
+4\. Order Month
+
+5\. Shipping Mode
+
+
+
+These features provide useful signals for identifying delivery risk before an order is shipped.
+
+
+
+\---
+
+
+
+\## 💡 Business Recommendations
+
+
+
+\### 1. Review High-Risk Shipping Modes
+
+
+
+Investigate the operational causes behind the extremely high late-delivery rates for First Class and Second Class shipments.
+
+
+
+\### 2. Implement Region-Specific Logistics Strategies
+
+
+
+Prioritize regions such as Central Africa for additional logistics capacity, carrier evaluation, and route optimization.
+
+
+
+\### 3. Introduce Pre-Shipment Risk Prediction
+
+
+
+Use the predictive model to flag high-risk orders before shipment so that corrective action can be taken proactively.
+
+
+
+\### 4. Optimize Scheduled Shipping
+
+
+
+Use historical delivery patterns and scheduled shipping days to improve delivery planning and reduce unrealistic delivery commitments.
+
+
+
+\### 5. Monitor High-Risk Time Periods
+
+
+
+Use month and hour-level patterns to anticipate periods of increased delivery risk and allocate resources accordingly.
+
+
+
+\---
+
+
+
+\## 📁 Project Files
+
+
+
+| File | Description |
+
+|---|---|
+
+| `Supply\_Chain\_Analysis.ipynb` | Complete data analysis, statistical analysis, visualization, feature engineering, and machine learning workflow |
+
+| `Supply\_Chain\_Delivery\_Performance\_Report.docx` | Detailed project report containing methodology, findings, model evaluation, and recommendations |
+
+| `.gitignore` | Specifies large datasets and model artifacts excluded from version control |
+
+
+
+> \*\*Note:\*\* The original dataset and trained model files are not included in this repository because of their large file sizes. The notebook contains the complete analysis and modeling workflow.
+
+
+
+\---
+
+
+
+\## 🔄 Project Workflow
 
 
 
 ```text
 
-Supply-Chain-Delivery-Performance-Analysis/
+Data Collection
 
-│
+&#x20;     ↓
 
-├── Supply\_Chain\_Analysis.ipynb
+Data Cleaning \& Preparation
 
-├── Supply\_Chain\_Delivery\_Performance\_Report.docx
+&#x20;     ↓
 
-├── README.md
+Exploratory Data Analysis
 
-└── .gitignore
+&#x20;     ↓
+
+Statistical Analysis
+
+&#x20;     ↓
+
+Root-Cause Diagnostics
+
+&#x20;     ↓
+
+Feature Engineering
+
+&#x20;     ↓
+
+Model Training
+
+&#x20;     ↓
+
+Model Comparison
+
+&#x20;     ↓
+
+Random Forest Selection
+
+&#x20;     ↓
+
+Feature Importance Analysis
+
+&#x20;     ↓
+
+Business Recommendations
 
 
 
-\### Conclusion
+\## 📌 Conclusion
 
 
 
-The analysis identified shipping mode, scheduled delivery windows, regions, and time-based factors as important contributors to late deliveries. The Random Forest model provided a data-driven approach for identifying high-risk orders before shipment and supporting proactive operational intervention.
+This project demonstrates an end-to-end approach to solving a real-world supply chain problem using data analytics and machine learning.
+
+
+
+The analysis identified a 54.71% late-delivery rate and approximately $2.1M in profit at risk, while highlighting Shipping Mode, Order Region, and time-based factors as important drivers of delivery risk.
+
+
+
+The final Random Forest model achieved an ROC-AUC of 0.82, demonstrating its potential to support proactive identification of high-risk orders before shipment.
+
+
+
+Overall, the project combines business analysis, statistical reasoning, data visualization, and predictive modeling to translate operational data into actionable business insights.
+
+
+
+\## 👩‍💻 Author
+
+
+
+Renu Nadar
+
+
+
+MSc Statistics | Data Analytics \& Machine Learning
 
