@@ -2,15 +2,11 @@
 
 
 
-\## 📌 Project Overview
-
-
-
 An end-to-end data analytics and machine learning project analyzing e-commerce delivery performance to identify late-delivery patterns, operational bottlenecks, financial impact, and key predictors of delivery delays.
 
 
 
-The project combines exploratory data analysis, statistical testing, business diagnostics, feature engineering, and predictive modeling to understand why orders are delivered late and how late-delivery risk can be predicted before shipment.
+The project combines exploratory data analysis, statistical testing, root-cause diagnostics, feature engineering, and predictive modeling to understand why orders are delivered late and how late-delivery risk can be predicted before shipment.
 
 
 
@@ -18,7 +14,7 @@ The project combines exploratory data analysis, statistical testing, business di
 
 
 
-\## 🎯 Business Problem
+\## Business Problem
 
 
 
@@ -48,47 +44,25 @@ The objective of this project was to:
 
 
 
-\## 📊 Dataset Overview
+\## Dataset Overview
 
 
 
-\- \*\*Orders analyzed:\*\* 172,765
+| Metric | Value |
 
-\- \*\*Analysis period:\*\* January 2015 – January 2018
+|---|---:|
 
-\- \*\*Late deliveries:\*\* 54.71%
+| Orders Analyzed | 172,765 |
 
-\- \*\*On-time deliveries:\*\* 45.29%
+| Analysis Period | January 2015 – January 2018 |
 
-\- \*\*Profit at risk from delayed orders:\*\* $2.1M
+| Late Deliveries | 54.71% |
 
-\- \*\*Total profit across profitable orders:\*\* $7.5M
+| On-Time Deliveries | 45.29% |
 
+| Profit at Risk from Delayed Orders | $2.1M |
 
-
-\---
-
-
-
-\## 🛠️ Tools \& Technologies
-
-
-
-\- \*\*Python\*\*
-
-\- \*\*Pandas\*\* – Data manipulation and analysis
-
-\- \*\*NumPy\*\* – Numerical computing
-
-\- \*\*Matplotlib\*\* – Data visualization
-
-\- \*\*Seaborn\*\* – Statistical visualization
-
-\- \*\*Scikit-learn\*\* – Machine learning
-
-\- \*\*Imbalanced-learn (SMOTE)\*\* – Class imbalance handling
-
-\- \*\*Jupyter Notebook\*\* – Analysis and model development
+| Total Profit Across Profitable Orders | $7.5M |
 
 
 
@@ -96,7 +70,33 @@ The objective of this project was to:
 
 
 
-\## 🔎 Analytical Approach
+\## Tools \& Technologies
+
+
+
+\- Python
+
+\- Pandas
+
+\- NumPy
+
+\- Matplotlib
+
+\- Seaborn
+
+\- Scikit-learn
+
+\- Imbalanced-learn (SMOTE)
+
+\- Jupyter Notebook
+
+
+
+\---
+
+
+
+\## Analytical Approach
 
 
 
@@ -104,7 +104,7 @@ The objective of this project was to:
 
 
 
-Analyzed delivery performance across:
+Delivery performance was analyzed across:
 
 
 
@@ -128,7 +128,7 @@ Analyzed delivery performance across:
 
 
 
-Time-based analysis was also performed to identify seasonal and hourly delivery patterns.
+Time-based analysis was also performed to identify seasonal and hourly patterns in delivery performance.
 
 
 
@@ -136,11 +136,11 @@ Time-based analysis was also performed to identify seasonal and hourly delivery 
 
 
 
-Statistical techniques were used to investigate relationships between delivery risk and categorical as well as numerical variables.
+Statistical techniques were used to investigate relationships between late-delivery risk and numerical as well as categorical variables.
 
 
 
-This included:
+The analysis included:
 
 
 
@@ -158,7 +158,7 @@ This included:
 
 
 
-The analysis identified major operational bottlenecks, particularly across \*\*Shipping Mode\*\* and \*\*Order Region\*\*.
+The analysis identified major operational bottlenecks, particularly across Shipping Mode and Order Region.
 
 
 
@@ -166,7 +166,7 @@ The analysis identified major operational bottlenecks, particularly across \*\*S
 
 
 
-\## 🚨 Key Business Findings
+\## Key Business Findings
 
 
 
@@ -192,7 +192,7 @@ Late-delivery rates varied substantially across shipping modes:
 
 
 
-This indicates that certain shipping modes are strongly associated with delivery delays.
+This indicates that shipping mode is strongly associated with delivery performance.
 
 
 
@@ -200,7 +200,7 @@ This indicates that certain shipping modes are strongly associated with delivery
 
 
 
-\*\*Central Africa\*\* recorded the highest late-delivery rate at approximately \*\*58.7%\*\*.
+Central Africa recorded the highest late-delivery rate at approximately 58.7%.
 
 
 
@@ -222,7 +222,7 @@ This highlights the need for region-specific logistics planning.
 
 
 
-Delayed orders represented approximately \*\*$2.1M in profit at risk\*\*, demonstrating that delivery performance is not only an operational issue but also a financial concern.
+Delayed orders represented approximately $2.1M in profit at risk, demonstrating that delivery performance is both an operational and financial concern.
 
 
 
@@ -230,7 +230,7 @@ Delayed orders represented approximately \*\*$2.1M in profit at risk\*\*, demons
 
 
 
-Late deliveries also showed variations across order months and order hours, making time-based features useful for predictive modeling.
+Delivery performance varied across order months and order hours, making time-based variables useful for predictive modeling.
 
 
 
@@ -238,7 +238,7 @@ Late deliveries also showed variations across order months and order hours, maki
 
 
 
-\## 🤖 Machine Learning
+\## Machine Learning
 
 
 
@@ -270,7 +270,7 @@ Five classification algorithms were evaluated:
 
 
 
-The model used features that would be available \*\*before shipment\*\*, including:
+The model used features that would be available before shipment, including:
 
 
 
@@ -316,7 +316,7 @@ Categorical variables were transformed using frequency encoding.
 
 
 
-\## 🏆 Final Model: Random Forest
+\## Final Model: Random Forest
 
 
 
@@ -340,7 +340,7 @@ Random Forest was selected as the final model based on its overall predictive pe
 
 
 
-The model achieved an \*\*ROC-AUC of 0.82\*\*, indicating good ability to distinguish between late and on-time deliveries.
+The model achieved an ROC-AUC of 0.82, indicating good ability to distinguish between late and on-time deliveries.
 
 
 
@@ -348,7 +348,7 @@ The model achieved an \*\*ROC-AUC of 0.82\*\*, indicating good ability to distin
 
 
 
-\## 📈 Important Predictors
+\## Important Predictors
 
 
 
@@ -376,7 +376,7 @@ These features provide useful signals for identifying delivery risk before an or
 
 
 
-\## 💡 Business Recommendations
+\## Business Recommendations
 
 
 
@@ -424,23 +424,51 @@ Use month and hour-level patterns to anticipate periods of increased delivery ri
 
 
 
-\## 📁 Project Files
+\## Project Workflow
 
 
 
-| File | Description |
+Data Collection  
 
-|---|---|
+↓  
 
-| `Supply\_Chain\_Analysis.ipynb` | Complete data analysis, statistical analysis, visualization, feature engineering, and machine learning workflow |
+Data Cleaning \& Preparation  
 
-| `Supply\_Chain\_Delivery\_Performance\_Report.docx` | Detailed project report containing methodology, findings, model evaluation, and recommendations |
+↓  
 
-| `.gitignore` | Specifies large datasets and model artifacts excluded from version control |
+Exploratory Data Analysis  
 
+↓  
 
+Statistical Analysis  
 
-> \*\*Note:\*\* The original dataset and trained model files are not included in this repository because of their large file sizes. The notebook contains the complete analysis and modeling workflow.
+↓  
+
+Root-Cause Diagnostics  
+
+↓  
+
+Feature Engineering  
+
+↓  
+
+Model Training  
+
+↓  
+
+Model Comparison  
+
+↓  
+
+Random Forest Selection  
+
+↓  
+
+Feature Importance Analysis  
+
+↓  
+
+Business Recommendations
 
 
 
@@ -448,57 +476,31 @@ Use month and hour-level patterns to anticipate periods of increased delivery ri
 
 
 
-\## 🔄 Project Workflow
+\## Project Files
 
 
 
-```text
+| File | Description |
 
-Data Collection
+|---|---|
 
-&#x20;     ↓
+| `Supply\_Chain\_Analysis.ipynb` | Complete data analysis, visualization, statistical analysis, feature engineering, and machine learning workflow |
 
-Data Cleaning \& Preparation
+| `Supply\_Chain\_Delivery\_Performance\_Report.docx` | Detailed project report containing methodology, findings, model evaluation, and recommendations |
 
-&#x20;     ↓
-
-Exploratory Data Analysis
-
-&#x20;     ↓
-
-Statistical Analysis
-
-&#x20;     ↓
-
-Root-Cause Diagnostics
-
-&#x20;     ↓
-
-Feature Engineering
-
-&#x20;     ↓
-
-Model Training
-
-&#x20;     ↓
-
-Model Comparison
-
-&#x20;     ↓
-
-Random Forest Selection
-
-&#x20;     ↓
-
-Feature Importance Analysis
-
-&#x20;     ↓
-
-Business Recommendations
+| `.gitignore` | Specifies large datasets and model artifacts excluded from version control |
 
 
 
-\## 📌 Conclusion
+> Note: The original dataset and trained model files are not included in this repository because of their large file sizes. The notebook contains the complete analysis and modeling workflow.
+
+
+
+\---
+
+
+
+\## Conclusion
 
 
 
@@ -518,11 +520,15 @@ Overall, the project combines business analysis, statistical reasoning, data vis
 
 
 
-\## 👩‍💻 Author
+\---
 
 
 
-Renu Nadar
+\## Author
+
+
+
+\*\*Renu Nadar\*\*
 
 
 
